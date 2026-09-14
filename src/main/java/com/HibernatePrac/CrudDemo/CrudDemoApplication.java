@@ -23,9 +23,27 @@ public class CrudDemoApplication {
 
 			// readstudent(studentDao); // reading data from database
 
-			queryforstudent(studentDao);
+			//queryforstudent(studentDao); // implementing complex queries
+
+			updateForStudent(studentDao); // help to update the objects
 
 		};
+	}
+
+	private void updateForStudent(studentDao studentDao) {
+		// find out which object need the updation using the id
+		int studentId = 1;
+		System.out.println("retreived student with id " + studentId);
+		student thestudent = studentDao.findById(studentId);
+
+		// make the changes
+		thestudent.setLastname("chamar");
+
+
+		// make the update
+		studentDao.update(thestudent);
+
+
 	}
 
 	private void queryforstudent(studentDao studentDao) {
