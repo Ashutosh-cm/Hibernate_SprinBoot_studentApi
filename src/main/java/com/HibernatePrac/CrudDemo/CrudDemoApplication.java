@@ -19,13 +19,13 @@ public class CrudDemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(studentDao studentDao) {
 		return runner->{
-			//createstduent(studentDao); // creating object in database
+			createstduent(studentDao); // creating object in database
 
 			// readstudent(studentDao); // reading data from database
 
 			//queryforstudent(studentDao); // implementing complex queries
 
-			updateForStudent(studentDao); // help to update the objects
+			//updateForStudent(studentDao); // help to update the objects
 
 		};
 	}
